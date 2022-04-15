@@ -4,6 +4,7 @@
 
 * {
     box-sizing: border-box;
+    --negro: #ececec;
 }
 
 html {
@@ -12,7 +13,6 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -263,11 +263,11 @@ footer i {
     margin: 0;
     padding: 20px 10px;
     color: rgb(100, 100, 100);
-    font-size: 1.75em;
+    font-size: 1em;
 }
 
 footer .container {
-    height: 100px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -423,5 +423,11 @@ footer .container {
 
     footer .container {
         justify-content: flex-end;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --negro: #ececec;
     }
 }
