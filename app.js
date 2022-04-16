@@ -7,7 +7,8 @@ ScrollReveal().reveal('.h2', {delay : 100});
 ScrollReveal().reveal('.h2', { origin: 'right' });
 ScrollReveal().reveal('.h2', { easing: 'ease-in' });
 ScrollReveal().reveal('.h2', { origin: 'top' });
-ScrollReveal().reveal('.scroll', { delay: 150 });
+ScrollReveal().reveal('.scroll', { delay: 100 });
+ScrollReveal().reveal('.scroll', { origin: 'bottom' });
 ScrollReveal().reveal('.scroll', { easing: 'ease-in' });
 
 ScrollReveal().reveal('.imgSeccion1', { easing: 'ease-in' });
@@ -31,6 +32,12 @@ ScrollReveal().reveal('.img2Seccion3', { easing: 'ease-in' });
 ScrollReveal().reveal('.img2Seccion3', { origin: 'right' });
 
 ScrollReveal().reveal('.seccion4 h2', { easing: 'ease-in-out' });
+
+let nav = document.querySelector('#nav')
+document.addEventListener('scroll', () => {
+    //Operador ternario
+    (window.scrollY > 150) ? nav.classList.add('scrollNav'): nav.classList.remove('scrollNav')
+})
 
 
 
