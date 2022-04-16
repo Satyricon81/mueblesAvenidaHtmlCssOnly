@@ -48,11 +48,12 @@ a, li {
     font-family: 'Comfortaa', cursive;
 }
 
-button {
+
+/* button {
     font-size: 1.25em;
     font-family: 'Comfortaa', cursive;
     font-weight: bold;
-}
+} */
 
 ul {
     list-style: none;
@@ -64,20 +65,54 @@ li {
     font-size: 1.25em;
 }
 
-button {
-    font-size: 1.5em;
-    font-weight: bold;
-    padding: 10px 30px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+.btn {
+    padding: 16px 48px;
     background-color: rgb(107, 23, 23);
+    border: 1px solid #131313;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
     color: white;
+    font-size: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
 }
 
-button:hover {
+.btn::before, .btn::after {
+    --offset: 2px;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    transition: all 0.4s;
+    opacity: 0;
+}
+
+.btn::before {
+    border-top: 2px solid blanchedalmond;
+    border-left: 2px solid blanchedalmond;
+    top: var(--offset);
+    left: var(--offset);
+}
+
+.btn::after {
+    border-bottom: 2px solid blanchedalmond;
+    border-right: 2px solid blanchedalmond;
+    bottom: var(--offset);
+    right: var(--offset);
+}
+
+.btn:hover {
     background-color: blanchedalmond;
     color: black;
+    border: 1px solid black;
+    transition-delay: 0.3s;
+}
+
+.btn:hover::before, .btn:hover::after {
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    opacity: 1;
 }
 
 .container {
@@ -143,7 +178,7 @@ header a:hover {
 }
 
 .seccion1 {
-    background-color: rgb(107, 23, 23);
+    background-color: #7D1E1C;
 }
 
 .seccion1 .container {
@@ -187,25 +222,31 @@ header a:hover {
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.1)),
-        url(./images/IMG_20220406_173818.jpg);
+        url(./images/Cropped_1.jpg);
 }
 
 .card:nth-child(2) {
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.1)),
-        url(./images/IMG_20220406_124202.jpg);
+        url(./images/Cropped_2.jpg);
 }
 
 .card:nth-child(3) {
     background-image: linear-gradient(0deg,
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.1)),
-        url(./images/IMG_20220406_124313.jpg);
+        url(./images/Cropped_1.jpg);
 }
 
 .seccion3 {
-    background-color: blanchedalmond;
+    background-image: repeating-linear-gradient(
+    -45deg,
+    #FFEBCD 0px,
+    #FFEBCD 20px,
+    #FFDCB5 20px,
+    #FFDCB5 40px
+    );
 }
 
 .seccion3 .container {
@@ -252,7 +293,13 @@ header a:hover {
 }
 
 footer {
-    background-color: blanchedalmond;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        #FFEBCD 0px,
+        #FFEBCD 20px,
+        #FFDCB5 20px,
+        #FFDCB5 40px
+        );
 }
 
 footer p {
@@ -276,7 +323,7 @@ footer .container {
     align-items: flex-end;
 }
 
-@media (min-width:720px) {
+@media (min-width: 920px) {
 
     h1 {
         font-size: 3.5em;
@@ -371,20 +418,6 @@ footer .container {
         justify-content: center;
     }
 
-    .seccion2 h2 {
-        font-size: 4em;
-    }
-
-    .seccion2 p {
-        display: block;
-        padding-top: 25px;
-        margin-bottom: 30px;
-    }
-
-    .seccion2 h4 {
-        margin-top: 0;
-    }
-
     .seccion2 .card {
         padding: 40px;
         background-color: rgb(248, 241, 227);
@@ -393,6 +426,21 @@ footer .container {
         background-position-y: 0;
         box-shadow: 2px 2px 5px;
     }
+    
+    .seccion2 h2 {
+        font-size: 4em;
+    }
+
+    .seccion2 p {
+        display: block;
+        padding-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .seccion2 h4 {
+        margin-top: 0;
+    }
+
 
     .seccion3 .container {
         width: 100%;
@@ -408,10 +456,19 @@ footer .container {
     }
 
     .seccion3 .imgSeccion3 {
-        background-image: url(./images/IMG_20220406_174413.jpg);
+        background-image: url(./images/20220412_115201.jpg);
         background-size: cover;
         background-position: center center;
-        height: 400px;
+        height: 600px;
+        width: 400px;
+        border-radius: 12px;
+    }
+
+    .seccion3 .img2Seccion3 {
+        background-image: url(./images/IMG_20220406_180311.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 600px;
         width: 400px;
         border-radius: 12px;
     }
