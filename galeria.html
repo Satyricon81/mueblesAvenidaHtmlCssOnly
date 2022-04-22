@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./app2.css">
+    <link rel="stylesheet" href="./galeria.css">
     <script src="https://kit.fontawesome.com/637ee434dc.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Galeria de Fotos</title>
@@ -13,19 +13,23 @@
 
 <body>
     <header>
-        <div class="container">
-            <p class="logo">Muebles Avenida</p>
-            <nav>
-                <a href="./index.html">Inicio</a>
-                <a href="#">Galeria</a>
-                <a href="./index.html">Contacto</a>
-            </nav>
-        </div>
-    </header>
+        <div class="menu_bar">
+            <a href="#" class="bt-menu"><span><i class="fa-solid fa-bars"></i></span>Muebles Avenida</a>
+		</div>
+
+		<nav>
+            <p>Muebles Avenida</p>
+			<ul>
+				<li><a href="./index.html"><span><i class="fa-solid fa-house"></i></span>Inicio</a></li>
+				<li><a href="./galeria.html" target="_blank"><span><i class="fa-solid fa-images"></i></span>Galeria</a></li>
+				<li><a href="#contacto"><span><i class="fa-solid fa-envelope"></i></span>Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
 
     <section class="seccion1">
         <div class="container">
-            <h1 class="h1">GALERIA</h1>
+            <h1 class="h1titulo">GALERIA</h1>
         </div>
     </section>
 
@@ -81,7 +85,7 @@
         </div>
     </footer>
 
-    <script src="./slider.js"></script>
+    <script src="./galeria.js"></script>
 </body>
 
 </html>

@@ -25,6 +25,27 @@ body {
 
 h1 {
     font-size: 3.5em;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.h1titulo {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-family: 'Cabin Sketch', cursive;
+    padding-bottom: 1em;
+}
+
+h3 {
+    font-size: 2em;
+    font-family: 'Cabin Sketch', cursive;
+    padding-bottom: 1em;
+}
+
+h4 {
+    font-size: 2.5em;
     font-family: 'Cabin Sketch', cursive;
 }
 
@@ -33,15 +54,18 @@ p {
     font-family: 'Comfortaa', cursive;
 }
 
-a, li {
+a, li, button {
     font-size: 1.25em;
     font-family: 'Comfortaa', cursive;
+    text-decoration: none;
+    color: white;
 }
 
 ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    color: white;
 }
 
 .container {
@@ -49,42 +73,70 @@ ul {
     margin: auto;
 }
 
-header {
-    background-color: rgb(107, 23, 23);
+.menu_bar {
+    display: block;
+    width: 100%;
+}
+
+.menu_bar .bt-menu {
+    display: block;
+    padding: 25px;
+    color: #fff;
+    background: rgb(107, 23, 23);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.menu_bar span {
+    float: right;
+    font-size: 25px;
+    padding: 0;
+}
+
+nav {
+    width: 60%;
+    height: 19%;
+    margin-left: -100%;
+    padding: 0;
+    position: absolute;
+    background: rgb(107, 23, 23);
     z-index: 1;
+    color: white;
+    transition: all 0.5s;
+}
+
+.show {
+    margin-left: 0;
+}
+
+header p {
+    display: none;
+}
+
+header nav ul li {
+    display: block;
+    padding: 10px 15px;
+    float: none;
+    color: white;
+    border-bottom: 2px solid rgba(255, 255, 255, .3);
+}
+
+header nav ul li:last-child {
+   border-bottom: none;
+}
+
+header span {
+    padding-right: 20px;
 }
 
 header .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-header nav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 10px;
-}
-
-header .logo {
-    margin: 0;
-    padding: 25px 30px;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-}
-
-header a {
-    padding: 5px 12px;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-    color: white;
-}
-
-header a:hover {
-    color: blanchedalmond;
 }
 
 .seccion1 {
@@ -169,8 +221,44 @@ footer .container {
 
 @media only screen and (min-width: 920px) and (orientation: landscape) {
 
-    html {
-        scroll-behavior: smooth;
+    .menu_bar {
+        display: none;
+    }
+
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+    }
+    
+    header nav {
+        position: fixed;
+        width: 100%;
+        height: 75px;
+        margin: 0;
+        padding: 25px;
+        display: flex;
+    }
+    
+    header nav p {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 2em;
+    }
+    
+    header nav ul {
+        width: 50%;
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    header nav ul li {
+        border: none;
     }
 
     h1 {
@@ -188,22 +276,11 @@ footer .container {
         font-family: 'Comfortaa', cursive;
     }
 
-    header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-    }
+  
 
-    header .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+    
 
-    header nav {
-        flex-direction: row;
-        padding-bottom: 0;
-        padding-right: 20px;
-    }
+    
 
     .seccion1 {
         margin-top: 125px;

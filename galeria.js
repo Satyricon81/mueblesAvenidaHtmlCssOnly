@@ -5,6 +5,13 @@ ScrollReveal({ easing: 'cubic-bezier(0.5, 0, 0, 1)' });
 ScrollReveal().reveal('.h1', { origin: 'left' });
 ScrollReveal().reveal('.h1', { easing: 'ease-in' });
 
+let menu_bar = document.querySelector('.menu_bar');
+let nav = document.querySelector('nav');
+
+menu_bar.addEventListener('click', () => {
+     nav.classList.toggle("show")
+});
+
 
 const slider = document.querySelector("#slider");
 let sliderSection = document.querySelectorAll(".slider__section");
@@ -50,9 +57,3 @@ setInterval(function() {
     Next();
 }, 5000);
 
-
-let nav = document.querySelector('#nav')
-document.addEventListener('scroll', () => {
-    //Operador ternario
-    (window.scrollY > 150) ? nav.classList.add('scrollNav'): nav.classList.remove('scrollNav')
-})
